@@ -163,11 +163,21 @@ y(7)
 ```
 
 * What's a typical use case for anonymous functions?
+  * code brevity. It often makes sense to use anonymous functions calls in callbacks and event handlers;
+  * scope management. Anonymous functions can be used to create temporary/private scope; 
+  * Anonymous function are often handy in closures and recursions. 
+  
 * Explain the "JavaScript module pattern" and when you'd use it.
   * Bonus points for mentioning clean namespacing.
   * What if your modules are namespace-less?
-* How do you organize your code? (module pattern, classical inheritance?)
+  * Modules are an integral piece of any robust application's architecture and typically help in keeping the units of code for a project both cleanly separated and organized.
+  * 
+
 * What's the difference between host objects and native objects?
+  * Native objects (Standard native objects): Object (constructor), Date, Math, parseInt, eval, string methods like indexOf and replace, array methods, ...
+
+  * Host objects  (object supplied by the host environment): window, document, location, history, XMLHttpRequest, setTimeout, getElementsByTagName, querySelectorAll, ...
+  
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
 * explain `Function.prototype.bind`?
