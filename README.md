@@ -136,10 +136,16 @@ Every bit of JS program is executed in execution context.
   * CommonJS and AMD are Javascript module definition APIs that have different implementations, but both come from the same origins. AMD is more suited for the browser, because it supports asynchronous loading of module dependencies. 
 
 * What's a hashtable?
+  * Javascript has no hash table object. In fact, all objects are hashes.
+  
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`. 
   * What needs to be changed to properly make it an IIFE?
+    * (function foo(){ }());
+  
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
   * How would you go about checking for any of these states?
+
+  
 * What is a closure, and how/why would you use one?
 * What's a typical use case for anonymous functions?
 * Explain the "JavaScript module pattern" and when you'd use it.
