@@ -136,6 +136,7 @@ Every bit of JS program is executed in execution context.
   * CommonJS and AMD are Javascript module definition APIs that have different implementations, but both come from the same origins. AMD is more suited for the browser, because it supports asynchronous loading of module dependencies. 
 
 * What's a hashtable?
+  * In JavaScript, all non-scalar objects behave as associative arrays. The object can use other objects as keys. However, the length of the associative array is not tracked (like with index-based arrays) and there is the potential that the keys can conflict with built-in members (such as those added to the object prototype) and custom members such as the length property or convenience methods. 
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`. 
   * What needs to be changed to properly make it an IIFE?
     * (function foo(){ }());
@@ -148,6 +149,19 @@ Every bit of JS program is executed in execution context.
       *  if(typeof variable_here === 'undefined'){ ... };
 
 * What is a closure, and how/why would you use one?
+  * Closures let you save state — as such, they can often be used in place of objects. 
+```
+function makeAdder(a) {
+    return function(b) {
+        return a + b;
+    };
+}
+x = makeAdder(5);
+y = makeAdder(20);
+x(6)
+y(7)
+```
+
 * What's a typical use case for anonymous functions?
 * Explain the "JavaScript module pattern" and when you'd use it.
   * Bonus points for mentioning clean namespacing.
