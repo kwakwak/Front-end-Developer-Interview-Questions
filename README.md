@@ -120,20 +120,20 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 ####[[⬆]](#toc) <a name='js'>JS Questions:</a>
 
 * Explain event delegation
-Event delegation allows us to attach a single event listener, to a parent element,   that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
+  * Event delegation allows us to attach a single event listener, to a parent element,   that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
 
 * Explain how `this` works in JavaScript
-- In JavaScript this always refers to the “owner” of the function we're executing, or rather, to the object that a function is a method of.
+  * In JavaScript this always refers to the “owner” of the function we're executing, or rather, to the object that a function is a method of.
 Every bit of JS program is executed in execution context.
 
 * Explain how prototypal inheritance works
-- In JavaScript, the inheritance is prototype-based. That means that there are no classes. Instead, an object inherits from another object 
+  * In JavaScript, the inheritance is prototype-based. That means that there are no classes. Instead, an object inherits from another object 
 
 * How do you go about testing your JavaScript?
-- Using Karma and jasmin
+  * Using Karma and jasmin
 
 * AMD vs. CommonJS?
-- CommonJS and AMD are Javascript module definition APIs that have different implementations, but both come from the same origins. AMD is more suited for the browser, because it supports asynchronous loading of module dependencies. 
+  * CommonJS and AMD are Javascript module definition APIs that have different implementations, but both come from the same origins. AMD is more suited for the browser, because it supports asynchronous loading of module dependencies. 
 
 * What's a hashtable?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`. 
