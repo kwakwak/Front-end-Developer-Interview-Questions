@@ -171,18 +171,45 @@ y(7)
   * Bonus points for mentioning clean namespacing.
   * What if your modules are namespace-less?
   * Modules are an integral piece of any robust application's architecture and typically help in keeping the units of code for a project both cleanly separated and organized.
-  * 
+
 
 * What's the difference between host objects and native objects?
   * Native objects (Standard native objects): Object (constructor), Date, Math, parseInt, eval, string methods like indexOf and replace, array methods, ...
 
   * Host objects  (object supplied by the host environment): window, document, location, history, XMLHttpRequest, setTimeout, getElementsByTagName, querySelectorAll, ...
   
-* Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+* Difference between: 1) `function Person(){}`
+                      2) `var person = Person()`
+                      3) `var person = new Person()`
+  * The difference is that #2 is defined at run-time, whereas #1 is defined at parse-time for a script block.
+'''
+<script>
+  // Error
+  functionOne();
+
+  var functionOne = function() {
+  };
+</script>
+
+<script>
+  // No error
+  functionTwo();
+
+  function functionTwo() {
+  }
+</script>
+'''
+  * #3 is a new object defined by constructor function.
+
 * What's the difference between `.call` and `.apply`?
+  * The main difference is that apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
+  
 * explain `Function.prototype.bind`?
+  * The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+  * 
+  
 * When do you optimize your code?
-* Can you explain how inheritance works in JavaScript?
+
 * When would you use `document.write()`?
   * Most generated ads still utilize `document.write()` although its use is frowned upon
 * What's the difference between feature detection, feature inference, and using the UA string
@@ -191,12 +218,22 @@ y(7)
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used? (Mustache.js, Handlebars etc.)
 * Explain "hoisting".
+  * Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+
 * Describe event bubbling.
+  * See event delegation.
+  
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built in JavaScript objects not a good idea?
-* Why is extending built ins a good idea?
+  * Chance of collisions
+  
 * Difference between document load event and document ready event?
+  * load is called when all assets are done loading, including images. ready is fired when the DOM is ready for interaction.
+  
 * What is the difference between `==` and `===`?
+  * The == operator will compare for equality after doing any necessary type conversions.
+  * The === operator will not do the conversion.
+
 * Explain how you would get a query string parameter from the browser window's URL.
 * Explain the same-origin policy with regards to JavaScript.
 * Describe inheritance patterns in JavaScript.
